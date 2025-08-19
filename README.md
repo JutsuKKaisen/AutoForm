@@ -20,7 +20,6 @@ A Chrome extension that automatically fills in university lecturer survey forms.
 1. Clone this repository or download the ZIP file and extract it:  
    ```bash
    git clone https://github.com/your-username/AutoForm.git
-````
 
 2. Open Chrome and go to:
 
