@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Đánh Giá Tuỳ Duyên</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      width: 280px;
+      padding: 16px;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: -5px;
+      margin-bottom: 5px;
+      margin-left: 50px;
+      font-weight: 1000;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .section {
+      margin-bottom: 5px;
+    }
+
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 5px;
+    }
+
+    .option-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .input-group {
+      display: none;
+      margin-top: 5px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 6px 8px;
+      font-size: 13px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      margin-top: 5px;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .row input {
+      flex: 1;
+      margin-top: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #da0000;
+    }
+  </style>
+</head>
+<body>
+  <h2>Đánh Giá Tuỳ Duyên</h2>
+
+  <div class="section">
+    <label>Chế độ đánh giá:</label>
+    <div class="radio-group">
+      <label class="option-label">
+        <input type="radio" name="mode" value="single" />
+        Đánh giá cố định 1 điểm
+      </label>
+      <label class="option-label">
+        <input type="radio" name="mode" value="random" />
+        Đánh giá ngẫu nhiên trong khoảng
+      </label>
+    </div>
+  </div>
+
+  <div class="section input-group" id="single-option">
+    <label for="column">Chọn điểm (1-5):</label>
+    <input id="column" type="number" min="1" max="5" placeholder="Ví dụ: 3" />
+  </div>
+
+  <div class="section input-group" id="range-option">
+    <label>Khoảng điểm ngẫu nhiên:</label>
+    <div class="row">
+      <input id="from" type="number" min="0" max="5" placeholder="Từ">
+      <input id="to" type="number" min="0" max="5" placeholder="Đến">
+    </div>
+  </div>
+
+  <button id="tick">Bắt đầu đánh giá</button>
+  <script src="popup.js"></script>
+</body>
+</html>

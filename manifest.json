@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "TUỲ TÂM ĐÁNH GIÁ",
+  "description": "Tool này đánh giá giảng viên tự động (không công tâm lắm!).",
+  "version": "1.0",
+  "action": {
+    "default_icon": {
+      "256": "icon-256.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "256": "icon-256.png"
+  },
+  "permissions": ["scripting", "activeTab"]
+}
